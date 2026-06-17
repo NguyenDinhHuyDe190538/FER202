@@ -3,7 +3,7 @@ import React, { useContext, useState, useEffect } from 'react'; //
 import { QuizContext } from './QuizContext';
 
 const Quiz = () => {
-  // Dùng useContext để lấy dữ liệu từ trạng thái Context [cite: 29]
+  // Dùng useContext để lấy dữ liệu từ trạng thái Context 
   const {
     questions,
     currentQuestionIndex,
@@ -15,7 +15,7 @@ const Quiz = () => {
     addNewQuestion
   } = useContext(QuizContext);
 
-  // useState quản lý thông tin input nhập câu hỏi mới từ phía user [cite: 22]
+  // useState quản lý thông tin input nhập câu hỏi mới từ phía user 
   const [inputQuestion, setInputQuestion] = useState('');
   const [inputAnswers, setInputAnswers] = useState(['', '', '']);
   const [inputCorrect, setInputCorrect] = useState('');
@@ -27,7 +27,7 @@ const Quiz = () => {
     }
   }, [currentQuestionIndex, isFinished, questions]);
 
-  // Xử lý sự kiện thêm câu hỏi tự nhập [cite: 21]
+  // Xử lý sự kiện thêm câu hỏi tự nhập 
   const handleFormSubmit = (e) => {
     e.preventDefault();
     if (!inputQuestion || inputAnswers.some(ans => ans === '') || !inputCorrect) {
@@ -35,21 +35,21 @@ const Quiz = () => {
       return;
     }
     
-    // Cập nhật câu hỏi mới vào state [cite: 24]
+    // Cập nhật câu hỏi mới vào state 
     addNewQuestion({
       question: inputQuestion,
       answers: inputAnswers,
       correctAnswer: inputCorrect
     });
 
-    // Reset các ô nhập dữ liệu [cite: 24]
+    // Reset các ô nhập dữ liệu 
     setInputQuestion('');
     setInputAnswers(['', '', '']);
     setInputCorrect('');
     alert("Thêm câu hỏi mới thành công!");
   };
 
-  // Giao diện khi hoàn thành bài Quiz [cite: 3, 31]
+  // Giao diện khi hoàn thành bài Quiz 
   if (isFinished) {
     return (
       <div style={{ padding: '20px', fontFamily: 'Arial' }}>
@@ -64,7 +64,7 @@ const Quiz = () => {
   return (
     <div style={{ padding: '20px', fontFamily: 'Arial', maxWidth: '600px' }}>
       
-      {/* KHU VỰC 1: HIỂN THỊ CÂU HỎI TRẮC NGHIỆM [cite: 25, 27] */}
+      {/* KHU VỰC 1: HIỂN THỊ CÂU HỎI TRẮC NGHIỆM  */}
       <div style={{ border: '1px solid #ccc', padding: '20px', borderRadius: '8px', marginBottom: '30px' }}>
         <h1 style={{ color: '#dc3545', margin: '0 0 10px 0' }}>Question {currentQuestionIndex + 1}</h1>
         <p style={{ fontSize: '18px', marginBottom: '20px' }}>{currentQuiz?.question}</p>
@@ -116,7 +116,7 @@ const Quiz = () => {
 
       <hr />
 
-      {/* KHU VỰC 2: USER INPUT - TỰ NHẬP THÊM CÂU HỎI [cite: 2, 21, 23] */}
+      {/* KHU VỰC 2: USER INPUT - TỰ NHẬP THÊM CÂU HỎI  */}
       <div style={{ marginTop: '20px', padding: '20px', background: '#f9f9f9', borderRadius: '8px', border: '1px dashed #bbb' }}>
         <h3>Tự nhập câu hỏi và lựa chọn đáp án của bạn:</h3>
         <form onSubmit={handleFormSubmit}>
