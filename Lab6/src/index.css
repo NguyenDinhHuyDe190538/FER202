@@ -1,0 +1,16 @@
+body { font-family: sans-serif; margin: 0; padding: 0; background-color: #f8f9fa; }
+.navbar { display: flex; gap: 20px; padding: 15px; background: white; border-bottom: 1px solid #ddd; }
+.banner { background: #212529; color: white; text-align: center; padding: 40px; font-size: 32px; margin-bottom: 20px; }
+.container { max-width: 1200px; margin: auto; padding: 25px; }
+.options-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 20px; }
+.option-item { background: #dcebfe; padding: 20px; border-radius: 6px; display: flex; align-items: center; gap: 10px; cursor: pointer; border: 1px solid #bce0fd; }
+.pagination-btns { display: flex; justify-content: center; gap: 10px; margin: 30px 0; padding: 15px 0; border-top: 1px solid #ccc; border-bottom: 1px solid #ccc; }
+.btn-blue { background: #007bff; color: white; border: none; padding: 8px 20px; border-radius: 4px; cursor: pointer; }
+.bottom-nav { display: flex; gap: 10px; margin-top: 20px; }
+.btn-cyan { background: #00bcd4; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; }
+.card-review { border-radius: 6px; padding: 20px; margin-bottom: 20px; }
+.correct-card { background-color: #d4edda; border: 1px solid #c3e6cb; color: #155724; }
+.incorrect-card { background-color: #f8d7da; border: 1px solid #f5c6cb; color: #721c24; }
+.right-answer-box { background: #ced4da; padding: 10px; border-radius: 4px; margin-top: 10px; color: #333; }
+.review-grid { display: flex; flex-wrap: wrap; gap: 15px; }
+.review-item { border: 1px solid #28a745; background: #d4edda; padding: 15px; width: 100px; border-radius: 4px; text-align: center; }
